@@ -1,2 +1,2 @@
 # KU-Hackathon-DL-Server
-KU-Hackathon-ML-Server
+KU-Hackathon-DL-Server
