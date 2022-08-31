@@ -3,3 +3,4 @@ train.csv
 test.csv
 .ipynb_checkpoints
 .DS_Store
+checkpoint.pth

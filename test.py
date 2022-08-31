@@ -19,7 +19,7 @@ def predict(predict_sentence, model):
     dataset_another = [data]
 
     another_test = BERTDataset(dataset_another, 0, 1, tok, max_len, True, False)
-    test_dataloader = torch.utils.data.DataLoader(another_test, batch_size=batch_size, num_workers=5)
+    test_dataloader = torch.utils.data.DataLoader(another_test, batch_size=batch_size, num_workers=2)
     
     model.eval()
 
@@ -38,20 +38,18 @@ def predict(predict_sentence, model):
             logits=i
             logits = logits.detach().cpu().numpy()
 
-            #FEAR, SURPRISE, ANGER, SADNESS, NEUTRAL, HAPPINESS, DISGUST
+            #HAPPINESS, ANXIOUS, PANIC, SADNESS, ANGER, HURT
             if np.argmax(logits) == 0:
-                test_eval.append("FEAR")
+                test_eval.append("HAPPINESS")
             elif np.argmax(logits) == 1:
-                test_eval.append("SURPRISE")
+                test_eval.append("ANXIOUS")
             elif np.argmax(logits) == 2:
-                test_eval.append("ANGER")
+                test_eval.append("PANIC")
             elif np.argmax(logits) == 3:
                 test_eval.append("SADNESS")
             elif np.argmax(logits) == 4:
-                test_eval.append("NEUTRAL")
+                test_eval.append("ANGER")
             elif np.argmax(logits) == 5:
-                test_eval.append("HAPPINESS")
-            elif np.argmax(logits) == 6:
-                test_eval.append("DISGUST")
+                test_eval.append("HURT")
 
     return test_eval[0]
