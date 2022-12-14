@@ -3,6 +3,11 @@
   <img src="assets/server_result.jpg" width="500">
 </p>
 
+<figure class="half">
+  <img src="assets/product1.png" width="400">
+  <img src="assets/product2.png" width="400">
+</figure>
+
 ## KU Hackathon
 * 2022-08-19 ~ 2022-08-21
 * `함께하는 사회`를 주제로 한 2박 3일 간의 hackathon
