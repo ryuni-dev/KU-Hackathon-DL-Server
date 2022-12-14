@@ -4,8 +4,8 @@
 </p>
 
 <figure class="half">
-  <img src="assets/product1.png" width="400">
-  <img src="assets/product2.png" width="400">
+  <img src="assets/product1.png" width="350">
+  <img src="assets/product2.png" width="350">
 </figure>
 
 ## KU Hackathon
