@@ -78,7 +78,7 @@ server{
 ```
 
 ### 4. gunicorn
-* FastAPI에서 멀티 스레드를 사용하기 위해서 gunicorn을 이용하였다.
+* FastAPI에서 멀티 프로세스를 사용하기 위해서 gunicorn을 이용하였다.
 ```sh
 gunicorn -k uvicorn.workers.UvicornWorker --access-logfile ./gunicorn-access.log  main:app --workers 2 --timeout=300
 ```
